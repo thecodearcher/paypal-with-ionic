@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Paypal Task
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  The 🌍 is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    If you get lost, Brian will be your guide. 🌝
   </p>
+  <ion-item>
+    <ion-label floating>Enter Amount</ion-label>
+    <ion-input type="number" [(ngModel)]="amount"></ion-input>
+  </ion-item>
+  <button ion-button (click)="pay()">Pay With Paypal</button>
+  <pre *ngIf="response">
+  <code>
+    response => {{response | json}}
+
+  </code>
+</pre>
 </ion-content>
